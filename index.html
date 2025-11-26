@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message For You</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cursive:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body onload="setRandomImage()"> 
+    <div class="container">
+
+        <div class="input-form" id="inputForm"> 
+            <h2>💕 Fill in the Blanks! 💕</h2>
+            <p>Ashlyn my love, please provide a few special words to help me complete my poem. You always know just what to say...</p>
+            
+            <div class="input-group">
+                <label for="adj1">1. An Adjective (e.g., Silly):</label>
+                <input type="text" id="adj1" placeholder="Enter Adjective 1">
+            </div>
+            <div class="input-group">
+                <label for="adj2">2. Another Adjective (e.g., Cute):</label>
+                <input type="text" id="adj2" placeholder="Enter Adjective 2">
+            </div>
+            <div class="input-group">
+                <label for="adj3">3. A Third Adjective (e.g., Perfect):</label>
+                <input type="text" id="adj3" placeholder="Enter Adjective 3">
+            </div>
+            <div class="input-group">
+                <label for="verb1">4. A Simple Positive Action Verb (e.g., Love, Adore...):</label>
+                <input type="text" id="verb1" placeholder="Enter Verb 1">
+            </div>
+            <div class="input-group">
+                <label for="adj4">5. A Fourth Adjective (e.g., Fun):</label>
+                <input type="text" id="adj4" placeholder="Enter Adjective 4">
+            </div>
+            <div class="input-group">
+                <label for="verb2">6. A Verb or Verb Phrase (e.g., Dance, Play Hockey):</label>
+                <input type="text" id="verb2" placeholder="Enter Verb 2">
+            </div>
+            <div class="input-group">
+                <label for="noun2">7. A Plural Noun or Noun Phrase (e.g., Sexy Glances, Smiles):</label>
+                <input type="text" id="noun2" placeholder="Enter Plural Noun">
+            </div>
+
+            <button id="revealBtn">Reveal My Custom Poem!</button>
+        </div>
+
+        <div class="letter-paper" id="poemLetter">
+            <h1 class="header"> Dear Ashlyn,</h1>
+            
+            <img src="" alt="A wonderful picture!" class="letter-photo" id="poemImage"> 
+
+            <p class="date">November 26, 2025</p>
+            
+            <h2 id="poemTitle">Like Woodstock Loves Snoopy</h2>
+
+            <div class="poem-content">
+                <p>
+                    I love you like Woodstock loves Snoopy<br>
+                    I need to be beside you like a <span id="word_adj1" class="placeholder">[ADJECTIVE]</span> groupie<br>
+                    You are the only one who understands my chicken scratch<br>
+                    Think of all the <span id="word_adj2" class="placeholder">[ADJECTIVE]</span> plans we could hatch<br>
+                    <br>
+                    To be your <span id="word_adj3" class="placeholder">[ADJECTIVE]</span> accessory<br>
+                    Is absolutely necessary<br>
+                    I may sleep in too late<br>
+                    But I <span id="word_verb1" class="placeholder">[VERB]</span> when you set me straight<br>
+                    <br>
+                    Let us go on an <span id="word_adj4" class="placeholder">[ADJECTIVE]</span> adventure<br>
+                    You are my favorite thirst quencher<br>
+                    That doesn’t really relate to Snoopy and Woodstock<br>
+                    But nonetheless when I look at you I gawk<br>
+                    <br>
+                    I just want to <span id="word_verb2" class="placeholder">[VERB]</span> together<br>
+                    Hang out with you no matter the weather<br>
+                    Get close to you and let’s get warm<br>
+                    I think of you and I want to reform<br>
+                    <br>
+                    When my love is so strong I know I can change<br>
+                    Anything to obtain all the kisses, gifts, words, and <span id="word_noun2" class="placeholder">[PLURAL NOUN]</span> we exchange<br>
+                    I know I should have sooner made it straight<br>
+                    I hope it’s not too little too late<br>
+                    <br>
+                    Please love me like Snoopy loves Woodstock<br>
+                    There is so much I want our love to unlock<br>
+                    My love for you might make me too loopy<br>
+                    But I love you like Woodstock loves Snoopy
+                </p>
+            </div>
+
+            <p class="signature">Love,<br>
+            Matthew Sadowski</p>
+
+            <button id="redoBtn" class="redo-button">Redo My Choices ✏️</button>
+        </div>
+
+        <div class="envelope">
+            <div class="flap top"></div>
+            <div class="flap bottom"></div>
+            <div class="flap left"></div>
+            <div class="flap right"></div>
+            <div class="inner-square">💌</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

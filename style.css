@@ -1,0 +1,261 @@
+/* --- Core Body and Layout --- */
+body {
+    font-family: 'Cursive', sans-serif; 
+    background-color: #fceef2; /* Soft romantic pink */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Start align for proper scrolling */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    padding-top: 30px;
+}
+
+/* --- Input Form Styling --- */
+.input-form {
+    background-color: #fffcf2; /* Creamy paper color */
+    border: 1px solid #e6d7c0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.5s ease-out; /* Smoothly fade out the form */
+}
+
+.input-form.hidden {
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+    padding: 0;
+    overflow: hidden;
+    pointer-events: none; /* Make it unclickable */
+}
+
+.input-form h2 {
+    color: #d15a7c;
+    margin-top: 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #b04060;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f0b0c0;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Cursive', sans-serif;
+    color: #4a4a4a;
+}
+
+#revealBtn {
+    padding: 12px 30px;
+    background-color: #d15a7c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1em;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#revealBtn:hover {
+    background-color: #b04060;
+    transform: scale(1.03);
+}
+
+/* --- Letter Styling --- */
+.letter-paper {
+    background-color: #fffcf2; /* Creamy paper color */
+    border: 1px solid #e6d7c0; /* Thin border for definition */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Soft shadow for a lifted look */
+    padding: 40px;
+    margin-bottom: 40px; 
+    width: 90%;
+    max-width: 650px;
+    line-height: 1.6;
+    color: #4a4a4a; /* Soft dark text color */
+    transform: rotate(-1deg); /* Slight rotation for a hand-placed look */
+    /* Initial hidden state */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-in, height 0s 1s, padding 1s; /* Fade in nicely */
+}
+
+/* State when the poem is revealed */
+.letter-paper.revealed {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    padding: 40px;
+    transition: opacity 1s ease-in 0.5s, height 0s, padding 1s ease-in 0.5s;
+}
+
+.header {
+    font-size: 1.8em;
+    color: #d15a7c; /* Romantic header color */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* Poem Title Styling */
+#poemTitle {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #a04060; /* Slightly darker pink for emphasis */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #d15a7c; /* Subtle underline */
+    padding-bottom: 5px;
+}
+
+.date {
+    font-size: 0.9em;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* The photo styling */
+.letter-photo {
+    max-width: 100%; 
+    max-height: 350px; 
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+    border: 8px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: rotate(-2deg);
+}
+
+.poem-content p {
+    white-space: pre-wrap; 
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.placeholder {
+    font-weight: bold;
+    color: #d15a7c; /* Highlight the injected words */
+    border-bottom: 2px dashed #f0b0c0; /* Use dashed line for a cute look */
+    padding: 0 3px;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+    font-weight: bold;
+    color: #d15a7c;
+}
+
+/* --- Redo Button Style --- */
+.redo-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f0b0c0; 
+    color: #4a4a4a;
+    border: 1px solid #d15a7c;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Cursive', sans-serif;
+    transition: background-color 0.2s;
+    display: block; 
+    width: 250px;
+    max-width: 100%;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.redo-button:hover {
+    background-color: #ffe0e6;
+}
+
+/* --- Envelope Styling --- */
+.envelope {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #d15a7c; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transform: rotate(5deg); 
+    z-index: 10;
+}
+
+.flap {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.flap.top {
+    border-width: 75px 100px 0 100px;
+    border-color: #f0b0c0 transparent transparent transparent; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.flap.bottom {
+    border-width: 0 100px 75px 100px;
+    border-color: transparent transparent #b04060 transparent; 
+    bottom: 0;
+    left: 0;
+}
+
+.flap.left {
+    border-width: 75px 100px 75px 0;
+    border-color: transparent #b04060 transparent transparent;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.flap.right {
+    border-width: 75px 0 75px 100px;
+    border-color: transparent transparent transparent #b04060;
+    top: 0;
+    right: 0;
+    left: auto;
+    z-index: 5;
+}
+
+.inner-square {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    z-index: 15;
+    pointer-events: none;
+}
